@@ -1,0 +1,4 @@
+#!/bin/sh
+pluginpath="$(dirname "$(readlink -f $0)")"
+command -v xmodmap > /dev/null 2>/dev/null && xmodmap "$pluginpath/Xmodmap" 2>/dev/null &
+command -v synclient > /dev/null 2>/dev/null && synclient VertEdgeScroll=1 HorizEdgeScroll=1 &
